@@ -1,0 +1,59 @@
+<div class="footer">
+    <div class="foot1">
+        <h1>COMPANY</h1>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Customers Speak</a></p>
+        <p><a href="#">In the News</a></p>
+        <p><a href="#">Career</a></p>
+        <p><a href="#">Contact</a></p>
+    </div>
+    <div class="foot2">
+        <h1>OUR POLICIES</h1>
+        <p><a href="#">Terms and Conditions</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Fees and Payments Policy</a></p>
+        <p><a href="#">Shipping and Delivery Policy</a></p>
+        <p><a href="#">Editorial Policy</a></p>
+    </div>
+    <div class="foot3">
+        <h1>Social</h1>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Twitter</a></p>
+        <p><a href="#">LinkedIn</a></p>
+        <p><a href="#">Youtube</a></p>
+    </div>
+</div>
+
+<script>
+    const card1 = document.querySelector(".card1");
+const card2 = document.querySelector(".card2");
+const card3 = document.querySelector(".card3");
+const cardText1 = document.querySelector(".card-text1");
+const cardText2 = document.querySelector(".card-text2");
+const cardText3 = document.querySelector(".card-text3");
+
+card1.addEventListener("mouseover",(e)=>{
+cardText1.classList.remove("none")
+})
+card2.addEventListener("mouseover",(e)=>{
+cardText2.classList.remove("none")
+})
+card3.addEventListener("mouseover",(e)=>{
+cardText3.classList.remove("none")
+})
+
+
+card1.addEventListener("mouseleave",(e)=>{
+cardText1.classList.add("none")
+})
+
+card2.addEventListener("mouseleave",(e)=>{
+cardText2.classList.add("none")
+})
+card3.addEventListener("mouseleave",(e)=>{
+cardText3.classList.add("none")
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles2.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-content">
+            <div class="content">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button onclick="showLoginUp()">SIGN IN</button>
+            </div>
+        </div>
+        <div class="login-page">
+            <div class="login-window">
+                <h1>Create Account</h1>
+                <div class="icons">
+                    <img src="images/facebook.svg" alt="">
+                    <img src="images/instagram.svg" alt="">
+                    <img src="images/twitter.svg" alt="">
+                </div>
+                <p>or use your email for registration:</p>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Name">
+                    <img class="user-icon" src="images/user.svg" alt="">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email">
+                    <img class="user-icon" src="images/email.svg" alt="">
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password">
+                    <img class="user-icon" src="images/password.svg" alt="">
+                </div>
+
+                <button>SIGN UP</button>
+            </div>
+        </div>
+
+        <div class="login-content login right">
+            <div class="content">
+                <h1>New User</h1>
+                <p>To keep connected with us please sign up to stay connected</p>
+                <button onclick="showSignUp()">SIGN UP</button>
+            </div>
+        </div>
+
+        <div class="login-page login left">
+            <div class="login-window">
+                <h1>Login</h1>
+                <div class="icons">
+                    <img src="images/facebook.svg" alt="">
+                    <img src="images/instagram.svg" alt="">
+                    <img src="images/twitter.svg" alt="">
+                </div>
+                <p>or use your email for login:</p>
+<!-- 
+                <div class="input-box">
+                    <input type="text" placeholder="Name">
+                    <img class="user-icon" src="./svg/user.svg" alt="">
+                </div> -->
+                <div class="input-box">
+                    <input type="email" placeholder="Email">
+                    <img class="user-icon" src="images/email.svg" alt="">
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password">
+                    <img class="user-icon" src="images/password.svg" alt="">
+                </div>
+
+                <button>SIGN IN</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let loginContent = document.querySelector(".login-content");
+let loginPage = document.querySelector(".login-page");
+let login = document.querySelectorAll( ".login" );
+// let signup = document.querySelectorAll( ".signup" );
+
+
+function showLoginUp(){
+    // Hide the Login Content
+    console.log(loginContent);
+    console.log(loginPage);
+    console.log(login);
+   
+    loginContent.classList.add("signup");
+    loginPage.classList.add("signup");
+
+    login.forEach((e) => {
+        e.classList.remove("login");
+   }); 
+}
+
+
+function showSignUp(){
+    // Hide the Login Content
+    console.log(loginContent);
+    console.log(loginPage);
+    console.log(login);
+   
+    loginContent.classList.remove("signup");
+    loginPage.classList.remove("signup");
+
+    login.forEach((e) => {
+        e.classList.add("login");
+   }); 
+}
+    </script>
+</body>
+</html>

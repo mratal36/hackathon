@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theMedHub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles4.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">medSpace</a></li>
+            <li><a href="/insure">medInsure</a></li>
+            <li><a href="/assist">medAssist</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href=""><img src="images/globe.svg"></a></li>
+        </ul>
+    </div>
+
+    <div class="section-2">
+        <div class="text">
+            <% if(locals.content){%>
+                <h1 class="texthead-1">
+                    <%= content %>
+                </h1>
+            <% } else {%>
+            <h1 class="texthead-1">
+                A Great Place To Receive Care
+            </h1>
+       <% } %>
+
+       <% if(locals.para){%>
+        <p class="textpara-1">
+            <%= para %>
+        </p>
+    <% }else{%>
+        <p class="textpara-1">
+            Your health is our mission, create a better world with us,
+            Medical recovery is most focused in helping you discover your most beaultful smile!
+        </p>
+        <%}%>
+           
+            <button class="getstarted"><a href="\login">Get Started</a></button>
+        </div>
+        <% if(locals.url){ %>
+            <div class="image-1"><img src="images\Untitled design .png" alt="nahi mili bro"></div>
+        <% }else if(locals.url2){%>
+            <div class="image-1"><img src="images\Untitled design (2).png" alt=""></div>
+            <%}else{%>
+            <div class="image-1"><img src="images/Untitled design.jpg" alt=""></div>
+        <%}%>
+    </div>
